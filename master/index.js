@@ -18,11 +18,14 @@ var net = require('net')
 
         socket.on('data', function(data) {
             try{
-                JSON.parse(data);
-                var comm = new Comm(data.origin);
+                var parsedData = JSON.parse(data);
+                console.log(parsedData);
+                sendMessage(socket, data);
             }catch(error){
                 socket.destroy();
+
                 console.error("error parsing incoming data")
+                console.error(error);
             }
 
         });
@@ -39,13 +42,10 @@ var net = require('net')
         console.log('listening');
     });
 
-function Comm(origin){
-    var client = new net.Socket();
-
-    client.connect(origin.port, origin.ip, function() {
-
-    });
-    return this
+function sendMessage(socket, origin){
+    socket.write("kek");
 }
+
+
 
 

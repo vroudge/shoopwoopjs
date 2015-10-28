@@ -29,9 +29,10 @@ var net = require('net')
         console.log('listening');
     });
 
+//todo retry on fail
 client.connect(consts.master.split(":")[1], consts.master.split(":")[0], function() {
     console.log('Connected');
-    client.write('Hello, server! Love, Client.');
+    client.write("event:subscribe");
 });
 
 
