@@ -1,0 +1,28 @@
+{
+  "name": "shoopwoopjs",
+  "version": "0.0.1",
+  "description": "Real time communicator between node servers for load-sharing",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vroudge/shoopwoopjs.git"
+  },
+  "keywords": [
+    "TCP",
+    "socket",
+    "real-time"
+  ],
+  "author": "v.roudge",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vroudge/shoopwoopjs/issues"
+  },
+  "homepage": "https://github.com/vroudge/shoopwoopjs",
+  "devDependencies": {
+    "chai": "^3.4.0",
+    "mocha": "^2.3.3"
+  }
+}
