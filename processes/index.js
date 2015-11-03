@@ -32,7 +32,7 @@ var net = require('net')
 //todo retry on fail
 client.connect(consts.master.split(":")[1], consts.master.split(":")[0], function() {
     console.log('Connected');
-    client.write("event:subscribe");
+    client.write(JSON.stringify({_name:"core:subscribe"}));
 });
 
 
